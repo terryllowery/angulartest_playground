@@ -98,4 +98,9 @@ RUN Xvfb :10 -screen 0 1920x1080x24 2>&1 >/dev/null & \
 sleep 20 & \
 npm run e2e
 
+#RUN npm run e2e
+RUN Xvfb :10 -screen 0 1920x1080x24 2>&1 >/dev/null & \
+sleep 20 & \
+npm run test-headless
+
 RUN node --version
